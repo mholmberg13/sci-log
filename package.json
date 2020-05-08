@@ -2,7 +2,7 @@
   "name": "sci-log",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://sci-log.herokuapp.com/"
+  "proxy": "https://sci-log.herokuapp.com/",
   "engines": {
     "npm": "6.14.5",
     "node": "12.15.0"
