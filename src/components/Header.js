@@ -4,7 +4,7 @@ class Header extends React.Component {
     render() {
         return (
             <div className="header">
-                <h1>Sci-Log<img id="logo" src="https://i.imgur.com/dK7t0E2.png"></img></h1>
+                <h1>Cy-Log<img id="logo" src="https://i.imgur.com/dK7t0E2.png"></img></h1>
             </div>
         )
     }
