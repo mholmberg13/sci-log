@@ -10,7 +10,7 @@ class App extends React.Component {
 
   handleAdd = (event, formInputs) => {
     event.preventDefault();
-    fetch("http://localhost:3000/entries", {
+    fetch("https://sci-log.herokuapp.com/entries", {
       body: JSON.stringify(formInputs),
       method: "POST",
       headers: {
@@ -29,7 +29,7 @@ class App extends React.Component {
   };
 
   handleDelete = (deletedEntry) => {
-    fetch(`http://localhost:3000/entries/${deletedEntry.id}`, {
+    fetch(`https://sci-log.herokuapp.com/entries/${deletedEntry.id}`, {
       method: "DELETE",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -49,7 +49,7 @@ class App extends React.Component {
   handleUpdate = (event, formInputs) => {
     event.preventDefault()
     console.log(formInputs.id)
-    fetch(`http://localhost:3000/entries/${formInputs.id}`, {
+    fetch(`https://sci-log.herokuapp.com/entries/${formInputs.id}`, {
       body: JSON.stringify(formInputs),
       method: 'PUT',
       headers: {
@@ -68,7 +68,7 @@ class App extends React.Component {
   }
 
   getEntries () {
-    fetch('http://localhost:3000/entries')
+    fetch('https://sci-log.herokuapp.com/entries')
       .then(response => response.json())
       .then(json => this.setState({ entries: json }))
       .catch(error => console.error(error))
