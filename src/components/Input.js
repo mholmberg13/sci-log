@@ -5,7 +5,7 @@ class Input extends React.Component {
   render () {
     return (
       <>
-        <label htmlFor={this.props.name}>{this.props.title}</label>
+        <label id={this.props.name + "-label"} htmlFor={this.props.name}>{this.props.name}: </label>
         <input
           id={this.props.name}
           name={this.props.name}

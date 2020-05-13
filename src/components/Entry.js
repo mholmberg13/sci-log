@@ -22,16 +22,17 @@ class Entry extends React.Component {
     }
 
     render () {
-        const {entry, handleDelete, handleUpdate} = this.props
+        const {entry, handleDelete, handleUpdate, i} = this.props
         return (
-            <div className="entry">
+            <div className="entry" key={i}>
                     <h3>{ entry.title }</h3>
+                    <h4>{ entry.date }</h4>
                     <p>{ entry.author }</p>
                     <p>{this.state.bodyVisible ? entry.body : null }</p> 
                     <button onClick={this.toggleBody}>VIEW ENTRY</button>
-                    <button onClick={()=> handleDelete(entry)}>DELETE</button>
                     <button onClick={this.toggleForm}>EDIT</button>
-                    {this.state.editVisible ? <Form entry={entry} handleSubmit={handleUpdate} toggleForm={this.toggleForm}/> : null }
+                    <button onClick={()=> handleDelete(entry)}>DELETE</button>
+                    {this.state.editVisible ? <Form id="edit-entry" entry={entry} handleSubmit={handleUpdate} toggleForm={this.toggleForm}/> : null }
             </div>
         )
     }

@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,400;1,700&display=swap');
+
+
+body {
+  background-image: linear-gradient(to bottom right, rgb(123, 170, 173)00, rgb(57, 185, 185), rgb(23, 178, 240));
+  height: 1500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Exo 2', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header h1 {
+  margin-left: 5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.newForm form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 5%;
+  width: 85%;
+  height: 210px;
+  text-align: right;
+}
+
+.entries-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 5%;
 }
 
-.App-link {
-  color: #61dafb;
+.entries {
+  width: 95%;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.entry {
+  flex-grow: 3;
+  border: 2px solid black;
+  width: auto;
+  margin: 1%;
+  padding-right: 10%;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  overflow: inherit;
+}
+
+#body {
+  border: 2px solid rgb(214, 12, 12);
+  flex-grow: 3;
+  margin: 3%;
+  resize: none;
+  width: 300px;
+}
+
+#date, #title, #author {
+  border: 2px solid rgb(214, 12, 12);
+  height: 20px;
+  flex-grow: 1;
+  margin-right: 3%;
+}
+
+#date-label, #title-label, #author-label {
+  align-self: start;
+}
+
+#body-label {
+  flex-grow: 4;
+  align-self: flex-start;
+  margin-left: 10px;
+}
+
+.body-area {
+  text-align: left;
+  margin-left: 125px;
+  margin-right: auto;
+}
+
+#add-update {
+  width: auto;
+  align-self: flex-end;
+  margin-left: 135px;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid white;
+  border-radius: 1px;
+}
+
+.entry form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-top: 15px;
+  height: 200px;
+  text-align: right;
+}
+
+.entry form .body-area {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;  
+  padding-left: 40px;
+  width: 250px;
+}
+
+.entry form #body {
+  width: 80%;
+}
+
+.entry form #body-label {
+  align-self: flex-start;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid white;
+  border-radius: 2px;
+  margin: 5px;
+  padding: 5px;
+}
+
+h1 {
+  display: flex;
+  flex-direction: row;
+  color: rgb(255, 255, 255);
+}
+
+#logo {
+  width: 30px;
+  height: 30px;
+  align-self: flex-end;
+  margin-left: 5px;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Input from "./Input.js";
+import BodyImport from "./BodyInput.js";
 
 
 class Form extends React.Component {
@@ -50,10 +51,11 @@ class Form extends React.Component {
           handleChange={this.handleChange}
           name={"date"}
         //   placeholder={this.props.entry.date}
-          type={"text"}
+          type={"date"}
           value={this.state.date}
           id={"date"}
         />
+        <br/>
         <Input
           handleChange={this.handleChange}
           name={"title"}
@@ -62,14 +64,7 @@ class Form extends React.Component {
           value={this.state.title}
           id={"title"}
         />
-        <Input
-          handleChange={this.handleChange}
-          name={"body"}
-        //   placeholder={this.props.entry.body}
-          type={"text"}
-          value={this.state.body}
-          id={"body"}
-        />
+        <br/>
         <Input
           handleChange={this.handleChange}
           name={"author"}
@@ -78,7 +73,14 @@ class Form extends React.Component {
           value={this.state.author}
           id={"author"}
         />
-        <input type="submit" value={this.props.entry ? "UPDATE" : "ADD"} />
+        <br/>
+        <BodyImport
+            handleChange={this.handleChange}
+            name={"body"}
+            value={this.state.body}
+            id={"body"} 
+        />
+        <input id="add-update" type="submit" value={this.props.entry ? "UPDATE" : "ADD"} />
       </form>
     );
   }

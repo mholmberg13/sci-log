@@ -1,7 +1,8 @@
 import React from 'react';
 import Main from './components/Main.js'
-import Header from './components/Header.js'
+import NewEntry from './components/NewEntry.js'
 import './App.css';
+import Header from './components/Header.js';
 class App extends React.Component {
   state = {
     entries: []
@@ -75,7 +76,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-          <Header handleSubmit={this.handleAdd} />
+          <Header />
+          <NewEntry handleSubmit={this.handleAdd} />
           <Main 
           entries={this.state.entries} 
           handleDelete={this.handleDelete}
