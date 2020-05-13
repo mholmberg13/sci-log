@@ -8,6 +8,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Exo 2', sans-serif;
+  color: white;
 }
 
 .header h1 {
@@ -41,7 +42,8 @@ body {
 
 .entry {
   flex-grow: 3;
-  border: 2px solid black;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
   width: auto;
   margin: 1%;
   padding-right: 10%;
@@ -87,8 +89,10 @@ body {
   margin-left: 135px;
   margin-right: auto;
   background-color: rgba(255, 255, 255, 0);
-  border: 2px solid white;
-  border-radius: 1px;
+  border: 2px solid rgb(214, 12, 12);
+  border-radius: 3px;
+  color: white;
+  padding: 5px 10px 5px 10px;
 }
 
 .entry form {
@@ -119,10 +123,11 @@ body {
 
 button {
   background-color: rgba(255, 255, 255, 0);
-  border: 2px solid white;
-  border-radius: 2px;
+  border: 2px solid rgb(214, 12, 12);
+  border-radius: 3px;
   margin: 5px;
-  padding: 5px;
+  padding: 5px 10px 5px 10px;
+  color: white;
 }
 
 h1 {
@@ -136,4 +141,8 @@ h1 {
   height: 30px;
   align-self: flex-end;
   margin-left: 5px;
+}
+
+.entry h3 {
+  color: rgb(214, 12, 12);
 }
