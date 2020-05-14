@@ -11,6 +11,12 @@ I used a React front-end that can perform all CRUD actions on a Rails api back-e
 - css
 - ruby
 - rails
+
+# User Stories
+- User can create a journal entry with date, title, body, and author.
+- User can edit entries.
+- User can delete entries.
+- User can view all entries.
  
 # Links
 Application: https://sci-port.herokuapp.com/
